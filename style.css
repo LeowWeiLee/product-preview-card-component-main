@@ -1,0 +1,158 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap");
+
+/* Root Level Custom Properties */
+:root {
+  --primary-color: hsl(158, 36%, 37%);
+  --secondary-color: hsl(30, 38%, 92%);
+  --netural-color-darkblue: hsl(212, 21%, 14%);
+  --netural-color-greyblue: hsl(228, 12%, 48%);
+  --netural-color-white: hsl(0, 0%, 100%);
+  --hover-color: #1a4031;
+
+  font-size: 14px;
+}
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+.attribution {
+  margin-top: 1.8rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Body Styles */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem auto;
+  background-color: var(--secondary-color);
+  max-height: 100dvh;
+}
+.product-card {
+  display: flex;
+  border-radius: 0.8rem;
+  max-width: 40rem;
+  max-height: 30rem;
+  background-color: var(--netural-color-white);
+}
+
+.product-image {
+  border-radius: 0.8rem 0rem 0rem 0.8rem;
+  resize: both;
+}
+
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+  padding: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--netural-color-greyblue);
+}
+
+.price {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.button {
+  display: flex;
+  background-color: var(--primary-color);
+  color: var(--netural-color-white);
+  padding: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: var(--hover-color);
+  cursor: pointer;
+}
+
+span {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.font-format {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--netural-color-darkblue);
+  font-size: x-large;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.cart-icon {
+  /* flip horizontally */
+  transform: scaleX(1);
+  padding-right: 1rem;
+}
+
+.green-color {
+  color: var(--primary-color);
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 560px) {
+  body {
+    margin: 1.5rem auto;
+  }
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .attribution {
+    display: none;
+  }
+
+  .product-image {
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    min-width: 24.5rem;
+    height: 20rem;
+    object-fit: cover;
+  }
+  .product-detail {
+    width: 100%;
+    max-width: 24.5rem;
+    height: 100%;
+    min-height: 24rem;
+    background-color: var(--netural-color-white);
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+    padding: 1rem;
+  }
+  .button {
+    border-radius: 0.5rem;
+  }
+  .price {
+    justify-content: flex-start;
+    p {
+      margin-right: 1rem;
+    }
+  }
+}
