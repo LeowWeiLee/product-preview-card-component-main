@@ -51,6 +51,7 @@ body {
 .product-image {
   border-radius: 0.8rem 0rem 0rem 0.8rem;
   resize: both;
+  width: 50%;
 }
 
 .product-detail {
